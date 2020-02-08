@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function displayRadioValue() {
+            var chkmale = document.getElementById("chkmale");
+            var chkfemale = document.getElementById("chkfemale");
+            var chkothers = document.getElementById("chkothers");
+            var trainername = document.getElementById("trainername");
+            var trainername2= document.getElementById("trainername2");
+            var trainername1= document.getElementById("trainername1");
+            trainername2.style.display = chkmale.checked ? "block" : "none";
+            trainername1.style.display = chkfemale.checked ? "block" : "none";
+            trainername.style.display = chkothers.checked ? "block" : "none";
+        }
+  </script>
+  <script>
+  function myPack(group3){
+      document.getElementById("result").value=group3;
+  }                      
+</script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <label>Name </label>
+            </td>
+            <td>
+                <input type="text" placeholder="firstname" pattern="[A-Za-z]{4,20}" required>
+            </td>
+            <td>
+                <input type="text" placeholder="SecondName" pattern="[A-Za-z]{4,20}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+             <label>Age</label>
+            </td>
+            <td>
+                <input type="number" pattern="[18-60]{2}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Email</label>
+            </td>
+            <td>
+                <input type="email" name="email" placeholder="abc@gmail.com" required>
+            </td>
+        </tr>
+        <tr><td><form>
+            <p>
+             <label>Mobile no</label>
+            <select>
+                <option name=" "></option>
+                <option name="+91" >INDIA</option>
+                <option name="+1">Us</option>
+                <option name="+011">NORTH AMERICA</option>
+            </select>
+            </p>
+        </td>
+        
+              <td>
+                <input type="text" pattern="/[1-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+                <input type="text" pattern="/[0-9]{1}/" size="1" required >
+                <input type="text" pattern="/[0-9]{1}/" size="1" required>
+        
+            
+        </form>
+    </td>        </tr>
+        
+   <tr><td><form>
+        <fieldset>
+            <legend>Address</legend>
+           <p> <input type = "text" id = "myText" maxlength="100" /> </p>
+          <p> <label>Street Address</label>
+                <input type = "text" id = "myText1" /></p>
+          <p> <label>State</label>
+                <input type = "text" id = "myText1" /></p>
+      <p> <label>Country</label>
+            <select>
+                <option name=" "></option>
+                <option name="ind">INDIA</option>
+                <option name="aus">AUSTRALIA</option>
+                <option name="newyork">NEWYORK</option>
+            </select>
+        </p>
+    </fieldset></form></td></tr>
+        
+    <tr><form>
+            <td><span>Trainer Preference :</span></td>
+            <td><label for="chkmale">
+                <input type="radio" name="gender" id="chkmale" onclick="displayRadioValue()">
+                Male Trainer</br></label>
+                <div id="trainername2" style="display: none" required>
+                    Trainer Name
+                    <input type="text"  id="trainername2" required>
+                    others
+                    <input type="text"   id="others2" required>
+                </div>
+
+                <label for="chkfemale">
+                <input type="radio" name="gender" id="chkfemale" onclick="displayRadioValue()">
+                Female Trainer</br></label>
+
+                <div id="trainername1" style="display: none" required>
+                    Trainer Name
+                    <input type="text" id="trainername1" required>
+                    others
+                    <input type="text" id="others" required>
+                    </div>
+
+                <label for="chkothers">
+                <input type="radio" name="gender" id="chkothers" onclick="displayRadioValue()" required>
+                 No Preference</br></label>
+
+                 
+                 <div id="trainername" style="display: none">
+                 Trainer Name
+                 <input type="text" id="trainername" required>
+                 others
+                 <input type="text" id="others" required>
+                 </div>
+            </td></form>
+        </tr>
+        
+            <tr>
+         <form>
+            <td>
+        <span>Do you need Physio therapist....?</span>
+        <label for="yes">
+        <input type="radio" name="yes" value="yes" required/>Yes
+        <input type="radio" name="yes" value="no" required/>No
+        </td>
+        </tr>
+    </form>
+        <tr><td>Appointment :</td></tr>
+        <table border="1" align="center" cellspacing="2" cellpadding="4">
+            <tr>
+                <td><strong>Day</strong></td>
+                <td><strong>7-9a.m</strong></td>
+                <td><strong>9-11am</strong></td>
+                <td><strong>11-1pm</strong></td>
+                <td><strong>1-3pm</strong></td>
+                <td><strong>3-5pm</strong></td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td><input type="radio" name="one" value="1" required>1</td>
+                <td><input type="radio" name="one" value="2" required>2</td>
+                <td><input type="radio" name="one" value="3" required>3</td>
+                <td><input type="radio" name="one" value="4" required>4</td>
+                <td><input type="radio" name="one" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td><input type="radio" name="sev" value="1" required>1</td>
+                <td><input type="radio" name="sev" value="2" required>2</td>
+                <td><input type="radio" name="sev" value="3" required>3</td>
+                <td><input type="radio" name="sev" value="4" required>4</td>
+                <td><input type="radio" name="sev" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td><input type="radio" name="six" value="1" required>1</td>
+                <td><input type="radio" name="six" value="2" required>2</td>
+                <td><input type="radio" name="six" value="3" required>3</td>
+                <td><input type="radio" name="six" value="4" required>4</td>
+                <td><input type="radio" name="six" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td><input type="radio" name="five" value="1" required>1</td>
+                <td><input type="radio" name="five" value="2" required>2</td>
+                <td><input type="radio" name="five" value="3" required>3</td>
+                <td><input type="radio" name="five" value="4" required>4</td>
+                <td><input type="radio" name="five" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                
+                <td><input type="radio" name="four" value="1" required>1</td>
+                <td><input type="radio" name="four" value="2" required>2</td>
+                <td><input type="radio" name="four" value="3" required>3</td>
+                <td><input type="radio" name="four" value="4" required>4</td>
+                <td><input type="radio" name="four" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td><input type="radio" name="three" value="1" required>1</td>
+                <td><input type="radio" name="three" value="2" required>2</td>
+                <td><input type="radio" name="three" value="3" required>3</td>
+                <td><input type="radio" name="three" value="4" required>4</td>
+                <td><input type="radio" name="three" value="5" required>5</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td><input type="radio" name="two" value="1" required>1</td>
+                <td><input type="radio" name="two" value="2" required>2</td>
+                <td><input type="radio" name="two" value="3" required>3</td>
+                <td><input type="radio" name="two" value="4" required>4</td>
+                <td><input type="radio" name="two" value="5" required>5</td>
+            </tr>
+            </table >
+            <table align="center">
+        <tr>
+        <td>
+        <fieldset id="group3">
+            <legend>select a package</legend>
+            <p><input type="radio" name="group3" onclick="myPack(this.value)" value="1200" required>INR 1200 (four weekly session)<br></p>
+            <p><input type="radio" name="group3" onclick="myPack(this.value)" value="500" required>INR 500 (one time assessment)<br></p>
+            <p><input type="radio" name="group3" onclick="myPack(this.value)" value="3000" required>INR 1200 (12 weekly sessions)<br></p>
+
+        </fieldset>
+        </td>
+        </tr>
+        <tr>
+            <td>
+        <p>
+            <label>Quote:</label>
+            INR:<input type="text" id="result">
+        </p>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" formtarget=>submit</button>
+            </td>
+        </tr>
+</table>
+</body>
+</html>
